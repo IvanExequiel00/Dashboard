@@ -16,7 +16,11 @@ const SideBar = () => {
         </div>
         {/* links */}
         <div className="flex-grow mt-8 ">
-
+            {/* links */}
+        </div>
+        {/* footer */}
+        <div>
+        <p className="text-center text-xs text-gray-500">&copy; 202 dashboard</p>
         </div>
     </div>
   )
