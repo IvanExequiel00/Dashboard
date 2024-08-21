@@ -1,7 +1,7 @@
 "use client";
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
-import { Archive, Clipboard, Layout, LucideIcon, Menu } from "lucide-react";
+import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, SlidersHorizontal, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -102,20 +102,26 @@ const SideBar = () => {
           isColapsed={isSideBarCollapsed}
         />
         <SidebarLink
-          href="/dashboard"
-          icon={Layout}
-          label="dashboard"
+          href="/users"
+          icon={User}
+          label="Users"
           isColapsed={isSideBarCollapsed}
         />
         <SidebarLink
-          href="/dashboard"
-          icon={Layout}
-          label="dashboard"
+          href="/settings"
+          icon={SlidersHorizontal}
+          label="Settings"
+          isColapsed={isSideBarCollapsed}
+        />
+        <SidebarLink
+          href="/expenses"
+          icon={CircleDollarSign}
+          label="Expenses"
           isColapsed={isSideBarCollapsed}
         />
       </div>
       {/* footer */}
-      <div>
+      <div className={`${isSideBarCollapsed ? "hidden" : "block"} mb-10`}>
         <p className="text-center text-xs text-gray-500">
           &copy; 202 dashboard
         </p>
